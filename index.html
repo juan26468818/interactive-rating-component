@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/favicon-32x32.png">
     <title>Interactive rating component</title>
     <link rel="stylesheet" href="./main.css"/>
     <script defer src="./script.js"></script>
@@ -14,21 +15,30 @@
 </head>
 <body>
     <main>
-        <picture class="star-icon-container">
-            <img src="./img/icon-star.svg" alt="icon star" class="star-icon" />
+        <picture class="star-icon-container first-card">
+            <img src="./img/icon-star.svg" class="star-icon" />
         </picture>
-        <h1>How did we do?</h1>
-        <p>Please let us know how we did with your support request. All feedback is
+        <picture class="hidden second-card">
+            <img src="./img/illustration-thank-you.svg"/>
+        </picture>
+        <div class="hidden second-card rated-container" >
+            <p class="rated">You selected <span id="rate"></span> out of 5</p>
+        </div>
+        <h1 class="first-card">How did we do?</h1>
+        <h2 class="hidden second-card">Thank you!</h2>
+        <p class="first-card">Please let us know how we did with your support request. All feedback is
             appreciated to help us improve our offering!
         </p>
-        <form>
-            <input type="button" value="1">
-            <input type="button" value="2">
-            <input type="button" value="3">
-            <input type="button" value="4">
-            <input type="button" value="5">
-            <button type="submit">SUBMIT</button>
-        </form>
+        <p class="hidden second-card">We appreciate you taking the time to give a rating. 
+            If you ever need more support, don't hesitate to get in touch</p>
+        <div class="rating-container first-card">
+            <button value="1" class="rating-button" onclick="active(1)">1</button> 
+            <button value="2" class="rating-button" onclick="active(2)">2</button> 
+            <button value="3" class="rating-button" onclick="active(3)">3</button> 
+            <button value="4" class="rating-button" onclick="active(4)">4</button> 
+            <button value="5" class="rating-button" onclick="active(5)">5</button> 
+        </div>
+        <button type="submit" class="submit-button first-card" id="submit-button">SUBMIT</button>
     </main>
 </body>
 </html>

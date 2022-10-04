@@ -5,7 +5,8 @@
     font-family: 'Overpass', sans-serif;
     color: var(--Light-Grey);
 }
-:root{
+html{
+    font-size: 15px;
     --Orange: hsl(25, 97%, 53%);
     --White: hsl(0, 0%, 100%);
     --Light-Grey: hsl(217, 12%, 63%);
@@ -13,11 +14,7 @@
     --Dark-Blue: hsl(213, 19%, 18%);
     --Very-Dark-Blue: hsl(216, 12%, 8%);
 }
-html{
-    font-size: 15px;
-}
 body{
-    width: 100vw;
     height: 100vh;
     background-color: var(--Very-Dark-Blue);
     padding: 2rem;
@@ -25,7 +22,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-main{
+section{
     background-color: var(--Dark-Blue);
     display: flex;
     flex-direction: column;
@@ -60,7 +57,7 @@ h1, h2{
     justify-content: center;
     width: 2rem;
     height: 2rem;
-    padding:  1.3rem;
+    padding:  1.5rem;
     border: none;
     border-radius: 50%;
     margin: 2rem 0;
@@ -86,7 +83,7 @@ h1, h2{
     background-color: var(--White);
     color: var(--Orange);
 }
-.second-card{
+#second-card{
     text-align: center;
 }
 .rated-container{

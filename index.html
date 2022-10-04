@@ -15,30 +15,39 @@
 </head>
 <body>
     <main>
-        <picture class="star-icon-container first-card" aria-hidden="true">
-            <img src="./img/icon-star.svg" class="star-icon" />
-        </picture>
-        <picture class="hidden second-card" aria-hidden="true">
-            <img src="./img/illustration-thank-you.svg"/>
-        </picture>
-        <div class="hidden second-card rated-container" >
-            <p class="rated">You selected <span id="rate"></span> out of 5</p>
-        </div>
-        <h1 class="first-card">How did we do?</h1>
-        <h2 class="hidden second-card">Thank you!</h2>
-        <p class="first-card">Please let us know how we did with your support request. All feedback is
-            appreciated to help us improve our offering!
-        </p>
-        <p class="hidden second-card">We appreciate you taking the time to give a rating. 
-            If you ever need more support, don't hesitate to get in touch</p>
-        <div class="rating-container first-card">
-            <button value="1" class="rating-button" onclick="active(1)">1</button> 
-            <button value="2" class="rating-button" onclick="active(2)">2</button> 
-            <button value="3" class="rating-button" onclick="active(3)">3</button> 
-            <button value="4" class="rating-button" onclick="active(4)">4</button> 
-            <button value="5" class="rating-button" onclick="active(5)">5</button> 
-        </div>
-        <button type="submit" class="submit-button first-card" id="submit-button">SUBMIT</button>
+
+        <!--Ratin card-->
+        <section id="first-card">
+            <picture class="star-icon-container" aria-hidden="true">
+                <img src="./img/icon-star.svg" class="star-icon" />
+            </picture>
+            <h1>How did we do?</h1>
+            <p>Please let us know how we did with your support request. All feedback is
+                appreciated to help us improve our offering!
+            </p>
+            <div class="rating-container">
+                <button value="1" class="rating-button" onclick="active(1)">1</button> 
+                <button value="2" class="rating-button" onclick="active(2)">2</button> 
+                <button value="3" class="rating-button" onclick="active(3)">3</button> 
+                <button value="4" class="rating-button" onclick="active(4)">4</button> 
+                <button value="5" class="rating-button" onclick="active(5)">5</button> 
+            </div>
+            <button type="submit" class="submit-button" id="submit-button">SUBMIT</button>
+        </section>
+        
+        <!--Thank you card-->
+        <section class="hidden" id="second-card">
+            <picture aria-hidden="true">
+                <img src="./img/illustration-thank-you.svg"/>
+            </picture>
+            <div class="rated-container" >
+                <p class="rated">You selected <span id="rate"></span> out of 5</p>
+            </div>
+            <h2>Thank you!</h2>
+            <p>We appreciate you taking the time to give a rating. 
+                If you ever need more support, don't hesitate to get in touch
+            </p>
+        </section>
     </main>
 </body>
 </html>

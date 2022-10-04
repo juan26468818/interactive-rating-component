@@ -1,6 +1,6 @@
 const activeSelection = document.getElementsByClassName("rating-button");
-const firstCard = Object.values(document.getElementsByClassName("first-card"));
-const secondCard = Object.values(document.getElementsByClassName("second-card"));
+const firstCard = document.getElementById("first-card");
+const secondCard = document.getElementById("second-card");
 const rate = document.getElementById("rate")
 const button = document.getElementById("submit-button");
 let activeRate = 0;
@@ -13,12 +13,9 @@ const active = (e) =>{
 
 button.addEventListener("click", (evn)=>{
     evn.preventDefault()
-    console.log(firstCard)
-    firstCard.map(e=>{
-        e.className += " hidden"
-    })
-    secondCard.map(e =>{
-        e.classList.remove("hidden")
-    })
+    if (activeRate === 0) return
+    
+    firstCard.className += " hidden";
+    secondCard.classList.remove("hidden")
     rate.textContent += activeRate
 })
